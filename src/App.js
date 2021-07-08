@@ -5,10 +5,6 @@ import { addItem } from  './actions/items';
 
 class App extends Component {
 
-  handleOnClick() {
-    this.props.store.dispatch(addItem());
-  }
-
   render() {
     return (
       <div className="App">
@@ -27,4 +23,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(App);
+export default connect((state) => state)(App);
